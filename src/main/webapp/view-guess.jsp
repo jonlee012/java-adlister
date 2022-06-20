@@ -1,16 +1,17 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: kimberlyshim
-  Date: 6/17/22
-  Time: 3:48 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% request.setAttribute("navbar", "Number"); %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <jsp:include page="partials/head.jsp">
+        <jsp:param name="title" value="View Guess"/>
+    </jsp:include>
+</head>
+<body>
+<jsp:include page="partials/navbar.jsp"/>
+
+<div class="container">
+    <h1>${message}</h1>
+</div>
+
+</body>
 </html>

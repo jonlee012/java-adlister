@@ -1,16 +1,25 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: kimberlyshim
-  Date: 6/17/22
-  Time: 11:09 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% request.setAttribute("navbar", "Color"); %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <jsp:include page="partials/head.jsp">
+        <jsp:param name="title" value="Pick Color"/>
+    </jsp:include>
+</head>
+<body>
+<jsp:include page="partials/navbar.jsp"/>
+
+<div class="container">
+    <form name="colorForm" method="post" action="ViewColorServlet">
+        <div>
+            <label for="color">
+                <input type="text" id="color" name="color">
+            </label>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" value="submit" placeholder="enter your favorite colo">
+    </form>
+</div>
+
+</body>
 </html>

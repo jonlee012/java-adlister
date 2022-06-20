@@ -7,7 +7,7 @@ import java.io.*;
 
 
 
-@WebServlet(name = "HelloWorldServlet", urlPatterns = "/")
+@WebServlet(name = "HelloWorldServlet", urlPatterns = "/HelloWorldServlet")
 public class HelloWorldServlet extends HttpServlet {
 //    public String sayHello (String name){
 //        return "Hello " + name + "!";
